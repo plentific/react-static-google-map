@@ -585,12 +585,12 @@ var StaticGoogleMap = function (_Component) {
 
         switch (child.type) {
           case Marker:
-          case React.createElement(Marker, null).type:
+          case React.createElement(Marker, { location: 'placeholder' }).type:
             return markerStrategy(child, props);
           case React.createElement(Marker.Group, null).type:
           case Marker.Group:
             return markerGroupStrategy(child, props);
-          case React.createElement(Path, null).type:
+          case React.createElement(Path, { points: [] }).type:
           case Path:
             return pathStrategy(child, props);
           case React.createElement(Path.Group, null).type:

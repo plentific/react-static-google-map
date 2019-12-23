@@ -752,12 +752,12 @@
 
           switch (child.type) {
             case Marker:
-            case React__default.createElement(Marker, null).type:
+            case React__default.createElement(Marker, { location: 'placeholder' }).type:
               return markerStrategy(child, props);
             case React__default.createElement(Marker.Group, null).type:
             case Marker.Group:
               return markerGroupStrategy(child, props);
-            case React__default.createElement(Path, null).type:
+            case React__default.createElement(Path, { points: [] }).type:
             case Path:
               return pathStrategy(child, props);
             case React__default.createElement(Path.Group, null).type:
