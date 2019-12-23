@@ -77,12 +77,12 @@ class StaticGoogleMap extends Component {
 
       switch (child.type) {
         case Marker:
-        case (<Marker />).type:
+        case (<Marker location='placeholder' />).type:
           return MarkerStrategy(child, props);
         case (<Marker.Group />).type:
         case Marker.Group:
           return MarkerGroupStrategy(child, props);
-        case (<Path />).type: 
+        case (<Path points={[]} />).type: 
         case Path:
           return PathStrategy(child, props);
         case (<Path.Group />).type:
